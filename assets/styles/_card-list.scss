@@ -1,0 +1,148 @@
+.card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: {
+    left: 0;
+    right: 0;
+  };
+  padding: {
+    left: 0;
+    right: 0;
+  };
+  counter-reset: heading;
+  list-style: none;
+}
+
+.card-list__item {
+  position: relative;
+  width: calc(33.33% - 80px);
+  margin: 0 40px 68px;
+  padding: 225px 30px 50px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 17px 55px 2px rgba(0, 121, 139, 0.09);
+  counter-increment: heading;
+}
+
+.card-list__item-text {
+  margin-top: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.card-list__item:before {
+  position: absolute;
+  top: 69px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  border: 6px solid $acc;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 48px;
+  color: $acc;
+  transform: translateX(-50%);
+  content: counter(heading);
+}
+
+.card-list__item_gym:before {
+  content: '';
+  border: none;
+  background-image: url('../img/icons/SVG/gym.svg');
+}
+
+.card-list__item_cloud:before {
+  content: '';
+  border: none;
+  background-image: url('../img/icons/SVG/cloud.svg');
+}
+
+.card-list__item_group:before {
+  content: '';
+  border: none;
+  background-image: url('../img/icons/SVG/group.svg');
+}
+
+.card-list__item_inyan:before {
+  content: '';
+  border: none;
+  background-image: url('../img/icons/SVG/inyan.svg');
+}
+
+.card-list__item_trainer:before {
+  content: '';
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/icons/SVG/personal.svg');
+}
+
+.card-list__item_bar:before {
+  content: '';
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/icons/SVG/bar2.svg');
+}
+
+.card-list__item_locker:before {
+  content: '';
+  background-image: url('../img/icons/SVG/locker.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-list__item_cardio:before {
+  content: '';
+  background-image: url('../img/icons/SVG/running-man.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 1280px) {
+  .card-list__item {
+    width: calc(33.33% - 40px);
+    margin: 0 20px 32px;
+    padding: 175px 30px 30px;
+  }
+  .card-list__item:before {
+    top: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-list__item {
+    width: calc(33.33% - 20px);
+    margin: 0 10px 15px;
+    padding: 110px 20px 20px;
+  }
+  .card-list__item:before {
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-list__item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 550px) {
+  .card-list__item {
+    width: calc(100% - 20px);
+  }
+}

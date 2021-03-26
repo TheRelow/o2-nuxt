@@ -1,0 +1,45 @@
+.price-block {
+  padding: 16px 20px 20px;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+}
+.price-block__price {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.price-block__price-count {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.price-block__price-text {
+  margin: -6px 0 15px;
+  font-weight: 500;
+}
+
+.price-block__price-info {
+  margin: 11px 0;
+}
+
+.price-block__divider {
+  height: 2px;
+  width: 72px;
+  background-color: $acc;
+  margin: 20px 0;
+}
+
+.price-block__title {
+  font-weight: 500;
+  color: $acc;
+}
+
+.price-block__description {
+  margin: 20px 0;
+}
+
+.price-block__btn {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}

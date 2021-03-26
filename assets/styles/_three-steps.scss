@@ -1,0 +1,91 @@
+.three-steps {
+  margin: 100px 0;
+  overflow: hidden;
+}
+
+.three-steps__title {
+  margin: 48px 0;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.three-steps__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.three-steps__infographic {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 616px;
+  width: calc(50% - 10px);
+  transform: translateX(-340px);
+  transform-origin: right center;
+}
+
+.three-steps__circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.three-steps__text {
+  width: calc(50% - 30px);
+  text-align: center;
+}
+
+.three-steps__text-title {
+  margin: 75px 0 32px;
+}
+
+.three-steps__text-text {
+  text-align: left;
+}
+
+@media (max-width: 1440px) {
+  .three-steps__infographic {
+    height: 480px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .three-steps__wrapper {
+    flex-wrap: wrap;
+  }
+  .three-steps__infographic {
+    transform: none;
+  }
+  .three-steps__text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .three-steps__infographic, .infographic {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+  .three-steps__title {
+    font-size: 7vw;
+  }
+  .infographic__lines, .infographic__dots, .infographic__outer-circle, .infographic__main-circle {
+    display: none;
+  }
+  .three-steps__circle {
+    position: static;
+  }
+  .infographic__list {
+    position: static;
+    margin: 0 auto 25px;
+  }
+  .infographic__list-item {
+    position: static;
+    transform: none;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

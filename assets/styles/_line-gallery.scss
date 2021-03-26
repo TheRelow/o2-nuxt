@@ -1,0 +1,82 @@
+.line-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 33vw;
+  width: 100%;
+  margin: 100px 0;
+}
+
+.line-gallery__col {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+}
+
+.line-gallery__img {
+  background-position: center center;
+  background-size: cover;
+}
+
+.line-gallery__img_1 {
+  height: 40%;
+  background-image: url('../img/line-gallery/asda.jpg');
+}
+
+.line-gallery__img_2 {
+  height: 60%;
+  background-image: url('../img/line-gallery/2.jpg');
+}
+
+.line-gallery__img_3 {
+  height: 100%;
+  background-image: url('../img/line-gallery/3.JPG');
+}
+
+.line-gallery__img_4 {
+  height: 50%;
+  background-image: url('../img/line-gallery/4.jpg');
+}
+
+.line-gallery__img_5 {
+  height: 50%;
+  background-image: url('../img/line-gallery/5.JPG');
+}
+
+.line-gallery__img_6 {
+  height: 60%;
+  background-image: url('../img/line-gallery/6.jpg');
+}
+
+.line-gallery__img_7 {
+  height: 40%;
+  background-image: url('../img/line-gallery/7.jpg');
+}
+
+.line-gallery__img_8 {
+  height: 40%;
+  background-image: url('../img/line-gallery/8.JPG');
+}
+
+.line-gallery__img_9 {
+  height: 60%;
+  background-image: url('../img/line-gallery/sqq.jpg');
+}
+
+@media (max-width: 800px) {
+  .line-gallery {
+    flex-wrap: wrap;
+    height: 140vw;
+  }
+  .line-gallery__col {
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      width: calc(100% / 3);
+      height: calc(100% / 5 * 2);
+    }
+    &:nth-child(4), &:nth-child(5) {
+      width: calc(100% / 2);
+      height: calc(100% / 5 * 3);
+    }
+  }
+}

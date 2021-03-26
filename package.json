@@ -1,0 +1,32 @@
+{
+  "name": "o2-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/firebase": "^7.5.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.8.3",
+    "firebase": "^8.3.0",
+    "gsap": "^3.6.0",
+    "imask": "^6.0.7",
+    "materialize-css": "^1.0.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.14.12",
+    "nuxt-gsap-module": "^1.2.1",
+    "particles.js": "^2.0.0",
+    "vue-click-outside": "^1.1.0",
+    "vue-slick-carousel": "^1.0.6",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "10.1.1"
+  }
+}

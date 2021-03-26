@@ -1,0 +1,93 @@
+.trainers {
+  position: relative;
+  margin: 50px 0;
+  background-image: url('../img/first-screen-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.trainers__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 80%;
+  left: 0;
+  background-image: url('../img/block-transition.svg');
+  background-size: 100%;
+  content: '';
+  z-index: 1;
+}
+
+.trainers__wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.trainers__slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trainers__item {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(25% - 8px);
+  height: 100%;
+}
+
+.trainers__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $acc;
+  opacity: 0.75;
+}
+
+.trainers__img {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  height: 340px;
+  background-image: url('../img/first-screen-woman.png');
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.trainers__content {
+  flex-grow: 1;
+  padding: 18px;
+  background-color: $dark;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.trainers__text {
+  margin: 10px 0 14px;
+}
+
+.trainers {
+  .slick-track {
+    display: flex !important;
+    align-content: stretch;
+  }
+  .slick-slide {
+    height: auto !important;
+    > div {
+      height: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .trainers {
+    .slick-next {
+      right: 25px;
+    }
+    .slick-prev {
+      left: 25px;
+    }
+  }
+}
