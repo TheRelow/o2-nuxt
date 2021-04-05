@@ -8,7 +8,7 @@
     <trainers ref="trainers"></trainers>
     <pricing ref="pricing"></pricing>
     <div class="wrapper">
-      <iframe class="yt-video" src="https://www.youtube.com/embed/_HEnohs6yYw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="yt-video" src="https://www.youtube.com/embed/aJDDx6M_VSo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="center-btn">
         <button class="btn-3d" @click="openPopup">
           <span class="btn-3d__text">Запишись на пробную тренировку</span>

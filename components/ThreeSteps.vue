@@ -20,14 +20,14 @@
               <img class="infographic__list-item-img" :src="require('@/assets/img/step-training.svg')" alt="">
               <div class="infographic__list-item-text">
                 <div class="infographic__list-item-title">Программа</div>
-                Выстроенная программа тренировок
+                Сбалансированная программа тренировок
               </div>
             </div>
             <div class="infographic__list-item infographic__list-item_3" ref="step3">
               <img class="infographic__list-item-img" :src="require('@/assets/img/step-training2.svg')" alt="">
               <div class="infographic__list-item-text">
                 <div class="infographic__list-item-title">Тренировки</div>
-                Регулярность занятий фитнесом
+                Регулярные занятия фитнесом
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
           Пройдите опрос и получите фитнес-бестселлер Хайнриха Бергмюллера: «В форме за 100 дней. Тренировочная программа Хермана Майера для всех, от начинающих до профессионалов».
         </div>
         <div class="title three-steps__text-title">
-          Ответьте на 4 вопроса и получите тренировочную программу
+          Ответьте на 4 вопроса и получите тренировочную программу БЕСПЛАТНО!
         </div>
         <div class="center-btn">
           <a href="javascript:;" class="btn-3d" @click="openPopup">Получить тренировочную программу</a>
@@ -91,32 +91,34 @@ export default {
     }
   },
   mounted() {
-    const gsap = this.$gsap
-    const ScrollTrigger = this.$ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: this.$refs.ThreeSteps,
-        start: 'center bottom',
-        // pin: true,
-        // end: "+=500"
-      },
-    });
-    tl.from(this.$refs.circleMain, { scale: 0 }, 0)
-    tl.from(this.$refs.circleBg, { scale: 0, delay: 0.2 }, 0)
-    tl.from(this.$refs.dotStart, { scale: 0 }, 1)
-    tl.to(this.$refs.circleProgress, { rotate: '360deg', delay: 0.1 }, 1)
-    tl.from(this.$refs.dot1, { scale: 0, delay: 0.55 }, 1)
-    tl.from(this.$refs.line1, { width: 0, delay: 0.6 }, 1)
-    tl.from(this.$refs.step1, { opacity: 0, delay: 0.7 }, 1)
-    tl.from(this.$refs.dot2, { scale: 0, delay: 0.7 }, 1)
-    tl.from(this.$refs.line2, { width: 0, delay: 0.75 }, 1)
-    tl.from(this.$refs.step2, { opacity: 0, delay: 0.85 }, 1)
-    tl.from(this.$refs.dot3, { scale: 0, delay: 0.85 }, 1)
-    tl.from(this.$refs.line3, { width: 0, delay: 0.9 }, 1)
-    tl.from(this.$refs.step3, { opacity: 0, delay: 1 }, 1)
-    tl.from(this.$refs.dotEnd, { scale: 0, delay: 1.3 }, 1)
-    tl.from(this.$refs.content, { opacity: 0, delay: 1.3 }, 1)
+    if (document.documentElement.clientWidth > 1250) {
+      const gsap = this.$gsap
+      const ScrollTrigger = this.$ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: this.$refs.ThreeSteps,
+          start: 'center bottom',
+          // pin: true,
+          // end: "+=500"
+        },
+      });
+      tl.from(this.$refs.circleMain, { scale: 0 }, 0)
+      tl.from(this.$refs.circleBg, { scale: 0, delay: 0.2 }, 0)
+      tl.from(this.$refs.dotStart, { scale: 0 }, 1)
+      tl.to(this.$refs.circleProgress, { rotate: '360deg', delay: 0.1 }, 1)
+      tl.from(this.$refs.dot1, { scale: 0, delay: 0.55 }, 1)
+      tl.from(this.$refs.line1, { width: 0, delay: 0.6 }, 1)
+      tl.from(this.$refs.step1, { opacity: 0, delay: 0.7 }, 1)
+      tl.from(this.$refs.dot2, { scale: 0, delay: 0.7 }, 1)
+      tl.from(this.$refs.line2, { width: 0, delay: 0.75 }, 1)
+      tl.from(this.$refs.step2, { opacity: 0, delay: 0.85 }, 1)
+      tl.from(this.$refs.dot3, { scale: 0, delay: 0.85 }, 1)
+      tl.from(this.$refs.line3, { width: 0, delay: 0.9 }, 1)
+      tl.from(this.$refs.step3, { opacity: 0, delay: 1 }, 1)
+      tl.from(this.$refs.dotEnd, { scale: 0, delay: 1.3 }, 1)
+      tl.from(this.$refs.content, { opacity: 0, delay: 1.3 }, 1)
+    }
   }
 }
 </script>

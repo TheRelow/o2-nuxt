@@ -9,16 +9,14 @@
             Приходи в гости!
             <br>
             <br>
-            Три тренировки
-            <br>
-            в подарок
+            Три первых тренировки - В ПОДАРОК!
           </div>
           <div>
             <button class="btn-3d" @click="openPopup">Записаться</button>
           </div>
         </div>
         <div class="first-screen__img-container">
-          <img class="first-screen__img" :src="require('../assets/img/humans/erohina.png')" alt="">
+          <img class="first-screen__img" :src="require('../assets/img/humans/erohina.webp')" alt="">
         </div>
       </div>
       <div class="wrapper first-screen__main">
@@ -28,14 +26,14 @@
             <div class="first-screen__subtitle">
               <span class="text_salad">4 месяца</span> безлимитного фитнеса
               <br>
-              всего за <span class="text_salad">5300 руб</span>.
+              всего за <span class="text_salad">5900 руб</span>.
             </div>
             <div class="first-screen__subtitle">
               Бонусы в карте :
               <br>
               1 персональная тренировка
               <br>
-              30 дней заморозки
+              20 дней заморозки
             </div>
           </div>
           <div>
@@ -43,7 +41,7 @@
           </div>
         </div>
         <div class="first-screen__img-container">
-          <img class="first-screen__img" :src="require('../assets/img/first-screen-man.png')" alt="">
+          <img class="first-screen__img" :src="require('../assets/img/first-screen-man.webp')" alt="">
         </div>
       </div>
     </VueSlickCarousel>

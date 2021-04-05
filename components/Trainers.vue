@@ -7,16 +7,15 @@
     <div class="wrapper trainers__wrapper">
       <VueSlickCarousel class="trainers__slider" v-bind="sliderSettings">
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/onishuk.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/onishuk3.webp') + ')'}"></div>
           <div class="trainers__content">
-            <div class="title">Александ Онищук</div>
-            <div class="trainers__text">Сертифицированный фитнес-инструктор групповых и персональных
-              программ</div>
+            <div class="title">Александр Онищук</div>
+            <div class="trainers__text">Сертифицированный персональный тренер тренажерного зала</div>
 <!--            <a href="javascript:;" class="btn" @click="trainerDetail">Записаться</a>-->
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/savinova.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/savinova.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Полина Савинова</div>
             <div class="trainers__text">Сертифицированный фитнес-инструктор групповых и персональных
@@ -24,21 +23,21 @@
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/bakumenko.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/bakumenko.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Андрей Бакуменко</div>
             <div class="trainers__text">Сертифицированный персональный тренер тренажерного зала</div>
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/erohina.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/erohina2.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Софья Ерохина</div>
             <div class="trainers__text">Сертифицированный фитнес-инструктор групповых и персональных программ</div>
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/makarov2.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/makarov2.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Юрий Макаров</div>
             <div class="trainers__text">Сертифицированный фитнес-инструктор групповых и персональных
@@ -46,7 +45,7 @@
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/anna.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/anna.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Анна Григорьева</div>
             <div class="trainers__text">Сертифицированный фитнес-инструктор групповых и персональных
@@ -54,14 +53,14 @@
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/braiz.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/braiz.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Артем Брайз</div>
-            <div class="trainers__text">инструктор тренажерного зала</div>
+            <div class="trainers__text">Инструктор тренажерного зала</div>
           </div>
         </div>
         <div class="trainers__item">
-          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/shablikov2.png') + ')'}"></div>
+          <div class="trainers__img" :style="{'background-image': 'url(' + require('assets/img/humans/shablikov2.webp') + ')'}"></div>
           <div class="trainers__content">
             <div class="title">Олег Шаблыков</div>
             <div class="trainers__text">Сертифицированный инструктор по йоге</div>

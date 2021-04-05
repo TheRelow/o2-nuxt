@@ -7,18 +7,18 @@
       </div>
       <div class="header-lp__menu">
         <button @mouseenter="hoverLink" @mouseleave="leaveLink" class="header-lp__menu-link" @click="scrollTo('about')">О нас</button>
-        <button @mouseenter="hoverLink" @mouseleave="leaveLink" class="header-lp__menu-link" @click="scrollTo('permissions')">Почему мы</button>
+        <button @mouseenter="hoverLink" @mouseleave="leaveLink" class="header-lp__menu-link" @click="scrollTo('permissions')">Почему мы?</button>
         <button @mouseenter="hoverLink" @mouseleave="leaveLink" class="header-lp__menu-link" @click="scrollTo('trainers')">Тренера</button>
         <button @mouseenter="hoverLink" @mouseleave="leaveLink" class="header-lp__menu-link" @click="scrollTo('pricing')">Цены</button>
       </div>
       <div class="header-lp__time">
-        Пн-Пт 7:00 - 23:00
+        Пн-Пт: 7.00-23.00
         <br>
-        Сб-Вс 9:00 - 21:00
+        Сб-Вс: 9.00-21.00
       </div>
     </div>
     <div class="header-lp__contacts">
-      <a href="tel:+78442550034" class="header-lp__contacts-link header-lp__contacts-link_phone"><img :src="require('../assets/img/icon-phone-white.svg')" class="header-lp__contacts-link-icon" alt=""> 8 (844) 255-00-34</a>
+      <a href="tel:+78442550034" class="header-lp__contacts-link header-lp__contacts-link_phone"><img :src="require('../assets/img/icon-phone-white.svg')" class="header-lp__contacts-link-icon" alt=""> 8 (8442) 55-00-34</a>
       <a href="javascript:;" @click="toggleFullscreenMap" class="header-lp__contacts-link header-lp__contacts-link_address"><img :src="require('../assets/img/icon-map_point-white.svg')" class="header-lp__contacts-link-icon" alt=""> Череповецкая 1А</a>
     </div>
   </header>

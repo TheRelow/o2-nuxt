@@ -14,7 +14,14 @@
 }
 
 .fullscreen-slider__slick {
+  display: none !important;
   z-index: 5;
+}
+
+.slick-initialized {
+  &.fullscreen-slider__slick {
+    display: block !important;
+  }
 }
 
 @media (max-width: 650px) {

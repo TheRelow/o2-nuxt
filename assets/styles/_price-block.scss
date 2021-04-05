@@ -29,12 +29,31 @@
 }
 
 .price-block__title {
+  margin-bottom: 0.8em;
   font-weight: 500;
   color: $acc;
 }
 
 .price-block__description {
   margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    position: relative;
+    margin: 1em 0;
+    padding-left: 18px;
+    &:before {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #000;
+      content: '';
+    }
+  }
 }
 
 .price-block__btn {

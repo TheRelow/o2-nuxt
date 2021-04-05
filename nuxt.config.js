@@ -33,8 +33,19 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-gsap-module'
+    'nuxt-gsap-module',
+    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    families: {
+      'Exo 2': true,
+      'IBM Plex Serif': true,
+      'Montserrat': {
+        wght: [300,400,500,700]
+      }
+    }
+  },
 
   gsap: {
     /* module options */
