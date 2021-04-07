@@ -68,7 +68,7 @@
           Ответьте на 4 вопроса и получите тренировочную программу БЕСПЛАТНО!
         </div>
         <div class="center-btn">
-          <a href="javascript:;" class="btn-3d" @click="openPopup">Получить тренировочную программу</a>
+          <a href="javascript:;" class="btn-3d" @click="openPopup" v-hide-cursor>Получить тренировочную программу</a>
         </div>
       </div>
     </div>

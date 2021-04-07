@@ -1,12 +1,11 @@
 <template>
-  <FormPopup where="Первый экран"></FormPopup>
+  <FormPopup where="Цены"></FormPopup>
 </template>
 
 <script>
 import FormPopup from "@/components/FormPopup";
-
 export default {
-  name: "FirstScreenPopup",
+  name: "PricePopup",
   components: { FormPopup },
 }
 </script>

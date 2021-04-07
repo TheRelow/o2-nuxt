@@ -1,4 +1,18 @@
 export default {
+
+  googleAnalytics: {
+    id: 'UA-144503294-1',
+  },
+
+  yandexMetrika: {
+    id: '54576715',
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true,
+    ecommerce: 'dataLayer',
+  },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -23,9 +37,11 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/baseComponents.js',
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/popup'},
     {src: '~/plugins/route'},
+    {src: '~/plugins/directives'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -93,5 +109,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true
   }
 }

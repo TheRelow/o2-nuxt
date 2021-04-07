@@ -33,11 +33,11 @@
 <!--        </div>-->
 <!--      </div>-->
     </div>
-    <div class="about__bgi"></div>
-    <div class="about__bgi about__bgi_2"></div>
-    <div class="about__bgi about__bgi_3"></div>
-    <div class="about__bgi about__bgi_4"></div>
-    <div class="about__bgi about__bgi_5"></div>
+    <div class="about__bgi" ref="bgi1"></div>
+    <div class="about__bgi about__bgi_2" ref="bgi2"></div>
+    <div class="about__bgi about__bgi_3" ref="bgi3"></div>
+    <div class="about__bgi about__bgi_4" ref="bgi4"></div>
+    <div class="about__bgi about__bgi_5" ref="bgi5"></div>
   </div>
 </template>
 
@@ -91,6 +91,7 @@ export default {
       },
     });
     tl.from(this.$refs.aboutWrapper, { scaleX: 0 }, 0)
+    tl.from(this.$refs.bgi1, { scale: 0, delay: 0.15 }, 0)
     tl.from(this.$refs.logo, { scale: 0, delay: 0.3 }, 0)
     tl.from(this.$refs.text, { opacity: 0, delay: 0.4 }, 0)
     tl.from(this.$refs.slider, { opacity: 0, delay: 0.4 }, 0)

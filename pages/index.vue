@@ -10,7 +10,7 @@
     <div class="wrapper">
       <iframe class="yt-video" src="https://www.youtube.com/embed/aJDDx6M_VSo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="center-btn">
-        <button class="btn-3d" @click="openPopup">
+        <button class="btn-3d" @click="openPopup" v-hide-cursor>
           <span class="btn-3d__text">Запишись на пробную тренировку</span>
         </button>
       </div>
@@ -31,7 +31,7 @@ import ThreeSteps from "~/components/ThreeSteps";
 import SlickTest from "~/components/SlickTest";
 import Trainers from "~/components/Trainers";
 import CardList from "~/components/CardList";
-import Questions from "@/components/Questions";
+import VideoPopup from "@/components/VideoPopup";
 import LineGallery from "@/components/LineGallery";
 
 export default {
@@ -43,9 +43,8 @@ export default {
       this.$gsap.to(window, {duration: 0.5, scrollTo: {y: this.scrollToAnchors[anc].$el, offsetY: 60}});
     },
     openPopup() {
-      console.log('12312312')
       this.$modals.open({
-        component: Questions,
+        component: VideoPopup,
         center: true
       })
     }

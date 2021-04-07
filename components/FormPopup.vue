@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="offer">
-      <input v-model="name" type="text" class="option offer__input" :class="{'offer__input_invalid': $v.name.$dirty && !$v.name.required}" placeholder="Имя">
+      <input v-model="name" type="text" class="option offer__input" :class="{'input_invalid': $v.name.$dirty && !$v.name.required}" placeholder="Имя">
       <base-input phone placeholder="Телефон" :value="phone" @input="phone = $event" :class="{'input_invalid': $v.phone.$dirty && (!$v.phone.required || !$v.phone.minLength)}"></base-input>
-      <button class="offer__btn btn" @click="sendMsg">Купить карту</button>
+      <button class="offer__btn btn" @click="sendMsg">Записаться</button>
     </div>
   </div>
 </template>
@@ -12,11 +12,16 @@
 import Bus from "@/popup/utils/bus";
 import {minLength, required} from 'vuelidate/lib/validators'
 export default {
-  name: "TrainerDetail",
+  name: "FirstScreenPopup",
   data: ()=>({
     name: null,
     phone: null
   }),
+  props: {
+    where: {
+      default: 'Не указано'
+    }
+  },
   validations: {
     name: {
       required
@@ -38,7 +43,8 @@ export default {
       this.$store.dispatch('main/setNewMessage', {
         name: this.name,
         phone: this.phone,
-        target: 'Купить карту'
+        target: 'Записаться на тренировку',
+        where: 'Первый экран'
       })
       this.closePopup()
     }

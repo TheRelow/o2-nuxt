@@ -2,7 +2,7 @@
   <div>
     <h3>Куда отправить что-то?</h3>
     <SelectComp @selected="selected" v-model="sendTo"></SelectComp>
-    <input type="text" pattern="\d*" placeholder="Номер телефона" @input="updatePhoneNumber" class="offer__input" :class="{'offer__input_invalid': $v.value.number.$dirty && (!$v.value.number.required || !$v.value.number.minLength)}" ref="phone">
+    <base-input phone placeholder="Телефон" :value="value.number" @input="value.number = $event" :class="{'input_invalid': $v.value.number.$dirty && (!$v.value.number.required || !$v.value.number.minLength)}"></base-input>
   </div>
 </template>
 
@@ -16,7 +16,6 @@ export default {
   components: { SelectComp },
   props: ['value'],
   data: ()=>({
-    mask: null,
     sendTo: {
       options: [
         { name: 'Телефон' },
@@ -50,12 +49,6 @@ export default {
       }
       return true
     }
-  },
-  mounted() {
-    console.log(this.$refs.phone)
-    this.mask = IMask(this.$refs.phone, {
-      mask: '+{7}(000)000-00-00'
-    });
   }
 }
 </script>

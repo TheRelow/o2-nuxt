@@ -6,9 +6,9 @@
           Цены
         </div>
         <div class="pricing__tab-list">
-          <div class="pricing__tab-list-item" :class="{'active': currentTab == 0}" @click="openTab(0)">Карты</div>
-          <div class="pricing__tab-list-item" :class="{'active': currentTab == 1}" @click="openTab(1)">Персональные тренировки</div>
-          <div class="pricing__tab-list-item" :class="{'active': currentTab == 2}" @click="openTab(2)">Разовое посещение</div>
+          <div v-hide-cursor class="pricing__tab-list-item" :class="{'active': currentTab == 0}" @click="openTab(0)">Карты</div>
+          <div v-hide-cursor class="pricing__tab-list-item" :class="{'active': currentTab == 1}" @click="openTab(1)">Персональные тренировки</div>
+          <div v-hide-cursor class="pricing__tab-list-item" :class="{'active': currentTab == 2}" @click="openTab(2)">Разовое посещение</div>
         </div>
       </div>
       <div class="pricing__main" v-if="currentTab == 0">
@@ -32,7 +32,7 @@
             <li>посещение фитнес клуба без ограничений</li>
             <li>заморозка 45 дней</li>
           </ul>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -56,7 +56,7 @@
             <li>посещение фитнес клуба без ограничений</li>
             <li>заморозка 30 дней</li>
           </ul>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -81,7 +81,7 @@
             <li>посещение фитнес клуба без ограничений</li>
             <li>заморозки нет</li>
           </ul>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -106,7 +106,7 @@
           <ul class="price-block__description">
             <li>10 тренировок с персональным тренером</li>
           </ul>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -133,7 +133,7 @@
           <ul class="price-block__description">
             <li>3 (три) тренировки с персональным тренером, индивидуальная программа питания и программа тренировок.</li>
           </ul>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -150,7 +150,7 @@
           <div class="title price-block__title">
             Разовое посещение с тренером
           </div>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -169,7 +169,7 @@
           <div class="title price-block__title">
             Разовое посещение с тренером
           </div>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -186,7 +186,7 @@
           <div class="title price-block__title">
             Разовое посещение
           </div>
-          <button class="btn price-block__btn" @click="openPopup">
+          <button class="btn price-block__btn" @click="openPopup" v-hide-cursor>
             Купить
           </button>
         </div>
@@ -197,7 +197,7 @@
 </template>
 
 <script>
-import TrainerDetail from "@/components/TrainerDetail";
+import PricePopup from "@/components/PricePopup";
 
 export default {
   name: "Pricing",
@@ -212,7 +212,7 @@ export default {
     },
     openPopup() {
       this.$modals.open({
-        component: TrainerDetail,
+        component: PricePopup,
         center: true
       })
     }

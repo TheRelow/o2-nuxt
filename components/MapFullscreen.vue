@@ -9,9 +9,9 @@
         Череповецкая ул. 1А, Волгоград
       </div>
       <div class="map-fullscreen__contacts">
-        тел:  8 (844) 255-00-34
+        тел: <a class="link" href="tel:+78442550034">8 (8442) 55-00-34</a>
         <br>
-        e-mail: qwe@qwe.ru
+        e-mail: <a class="link" href="mailto:ask@o2fit.ru">ask@o2fit.ru</a>
       </div>
       <div class="socials">
         <img :src="require('@/assets/img/whatsapp.svg')" alt="">

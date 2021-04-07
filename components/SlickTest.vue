@@ -12,7 +12,7 @@
             Три первых тренировки - В ПОДАРОК!
           </div>
           <div>
-            <button class="btn-3d" @click="openPopup">Записаться</button>
+            <button class="btn-3d" @click="openPopup" v-hide-cursor>Записаться</button>
           </div>
         </div>
         <div class="first-screen__img-container">
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div>
-            <button class="btn-3d" @click="openPopup">Забронировать</button>
+            <button class="btn-3d" @click="openPopup" v-hide-cursor>Забронировать</button>
           </div>
         </div>
         <div class="first-screen__img-container">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </VueSlickCarousel>
-    <div class="first-screen__scroll-bottom" @click="$emit('scrollTo', 'about')"></div>
+    <div class="first-screen__scroll-bottom" v-hide-cursor @click="$emit('scrollTo', 'about')"></div>
     <div class="first-screen__wave"></div>
     <div class="first-screen__particles" id="particles-js"></div>
     <div class="first-screen__overlay" :style="overlayStyle"></div>
