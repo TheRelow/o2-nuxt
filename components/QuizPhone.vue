@@ -18,9 +18,10 @@ export default {
   data: ()=>({
     sendTo: {
       options: [
-        { name: 'Телефон' },
-        { name: 'Telegram', selected: true },
+        { name: 'Телефон', selected: true },
+        // { name: 'Telegram' },
         { name: 'WhatsApp' },
+        // { name: 'Instagram' },
       ],
       selectedNames: []
     }

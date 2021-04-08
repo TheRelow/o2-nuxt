@@ -44,7 +44,7 @@ export default {
         name: this.name,
         phone: this.phone,
         target: 'Записаться на тренировку',
-        where: 'Первый экран'
+        where: this.where
       })
       this.closePopup()
     }
