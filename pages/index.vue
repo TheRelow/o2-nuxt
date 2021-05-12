@@ -35,6 +35,23 @@ import VideoPopup from "@/components/VideoPopup";
 import LineGallery from "@/components/LineGallery";
 
 export default {
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+      title:
+        'o2fit.ru title',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'o2fit.ru description',
+        },
+      ],
+    }
+  },
   components: {
     HeaderLp, AboutUs, Pricing, FooterMap, BlockTransition, Trainers, CardList, ThreeSteps, SlickTest, LineGallery
   },

@@ -8,7 +8,7 @@
       <div class="header-lp__menu">
         <button v-hide-cursor class="header-lp__menu-link" @click="scrollTo('about')">О нас</button>
         <button v-hide-cursor class="header-lp__menu-link" @click="scrollTo('permissions')">Почему мы?</button>
-        <button v-hide-cursor class="header-lp__menu-link" @click="scrollTo('trainers')">Тренера</button>
+        <button v-hide-cursor class="header-lp__menu-link" @click="scrollTo('trainers')">Тренеры</button>
         <button v-hide-cursor class="header-lp__menu-link" @click="scrollTo('pricing')">Цены</button>
       </div>
       <div class="header-lp__time">

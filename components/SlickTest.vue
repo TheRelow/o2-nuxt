@@ -37,7 +37,7 @@
             </div>
           </div>
           <div>
-            <button class="btn-3d" @click="openPopup" v-hide-cursor>Забронировать</button>
+            <button class="btn-3d" @click="openPopup2" v-hide-cursor>Забронировать</button>
           </div>
         </div>
         <div class="first-screen__img-container">
@@ -59,6 +59,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 // import 'particles.js'
 import particleOption from "@/assets/particles.json";
 import FirstScreenPopup from "@/components/FirstScreenPopup";
+import FirstScreenPopup2 from "@/components/FirstScreenPopup2";
 
 export default {
   name: 'SlickTest',
@@ -106,6 +107,12 @@ export default {
     openPopup() {
       this.$modals.open({
         component: FirstScreenPopup,
+        center: true
+      })
+    },
+    openPopup2() {
+      this.$modals.open({
+        component: FirstScreenPopup2,
         center: true
       })
     },

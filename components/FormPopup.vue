@@ -3,7 +3,7 @@
     <div class="offer">
       <input v-model="name" type="text" class="option offer__input" :class="{'input_invalid': $v.name.$dirty && !$v.name.required}" placeholder="Имя">
       <base-input phone placeholder="Телефон" :value="phone" @input="phone = $event" :class="{'input_invalid': $v.phone.$dirty && (!$v.phone.required || !$v.phone.minLength)}"></base-input>
-      <button class="offer__btn btn" @click="sendMsg">Записаться</button>
+      <button class="offer__btn btn" @click="sendMsg">{{btnText}}</button>
     </div>
   </div>
 </template>
@@ -20,6 +20,9 @@ export default {
   props: {
     where: {
       default: 'Не указано'
+    },
+    btnText: {
+      default: 'Записаться'
     }
   },
   validations: {

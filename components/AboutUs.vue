@@ -91,7 +91,11 @@ export default {
       },
     });
     tl.from(this.$refs.aboutWrapper, { scaleX: 0 }, 0)
-    tl.from(this.$refs.bgi1, { scale: 0, delay: 0.15 }, 0)
+    tl.from(this.$refs.bgi1, { translateX: -500, delay: 0.15 }, 0)
+    tl.from(this.$refs.bgi2, { translateX: -500, delay: 0.2 }, 0)
+    tl.from(this.$refs.bgi3, { translateX: 500, delay: 0.25 }, 0)
+    tl.from(this.$refs.bgi4, { translateX: 500, delay: 0.3 }, 0)
+    tl.from(this.$refs.bgi5, { translateX: 500, delay: 0.35 }, 0)
     tl.from(this.$refs.logo, { scale: 0, delay: 0.3 }, 0)
     tl.from(this.$refs.text, { opacity: 0, delay: 0.4 }, 0)
     tl.from(this.$refs.slider, { opacity: 0, delay: 0.4 }, 0)

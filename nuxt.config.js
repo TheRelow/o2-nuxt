@@ -1,28 +1,20 @@
 export default {
 
-  googleAnalytics: {
-    id: 'UA-144503294-1',
-  },
-
-  yandexMetrika: {
-    id: '54576715',
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true,
-    webvisor: true,
-    ecommerce: 'dataLayer',
-  },
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'o2-nuxt',
+    title: 'o2fit.ru',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'yandex-verification', content: '58ad13c846585501' },
+      {
+        name: 'google-site-verification',
+        content: 'iE64WDDZbbwHTv6RAxTTj-5RFx1a-O9NIKLmQ1jvgLM',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -44,6 +36,13 @@ export default {
     {src: '~/plugins/directives'},
   ],
 
+  robots: {
+    UserAgent: '*',
+    Disallow: ['/cart', '/checkout'],
+    Sitemap: 'https://npovolna.ru/sitemap.xml',
+    CleanParam: 'p /',
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -52,6 +51,58 @@ export default {
     'nuxt-gsap-module',
     '@nuxtjs/google-fonts'
   ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    '@nuxtjs/yandex-metrika',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyBuzISeyN2BNuhuiDdz_4-F8eVY8oq-ZZQ",
+          authDomain: "o2-proj.firebaseapp.com",
+          databaseURL: "https://o2-proj-default-rtdb.firebaseio.com",
+          projectId: "o2-proj",
+          storageBucket: "o2-proj.appspot.com",
+          messagingSenderId: "495294938001",
+          appId: "1:495294938001:web:16aa4ee5720a3e8b157830",
+          measurementId: "G-0GEGKF4P9W"
+        },
+        services: {
+          auth: true // Just as example. Can be any other service.
+        }
+      }
+    ],
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+  ],
+
+  sitemap: {
+    hostname: 'https://o2fit.ru',
+
+    gzip: true,
+    exclude: ['/admin'],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+    },
+  },
+
+  googleAnalytics: {
+    id: 'UA-144503294-1',
+  },
+
+  yandexMetrika: {
+    id: '54576715',
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true,
+    ecommerce: 'dataLayer',
+  },
 
   googleFonts: {
     families: {
@@ -70,32 +121,6 @@ export default {
       scrollTo: true
     }
   },
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    [
-      '@nuxtjs/firebase',
-      {
-        config: {
-          apiKey: "AIzaSyCIWIwu5z3tyXKJGkdOYerXKqhdgtz6ytg",
-          authDomain: "o2-fitness.firebaseapp.com",
-          databaseURL: "https://o2-fitness-default-rtdb.firebaseio.com",
-          projectId: "o2-fitness",
-          storageBucket: "o2-fitness.appspot.com",
-          messagingSenderId: "298077419827",
-          appId: "1:298077419827:web:506f934ce39d66d8186646",
-          measurementId: "G-TDLK6QRFVZ"
-        },
-        services: {
-          auth: true // Just as example. Can be any other service.
-        }
-      }
-    ],
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-  ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

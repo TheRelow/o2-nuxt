@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h3>Куда отправить что-то?</h3>
+    <h3>Куда отправить тренировочную программу?</h3>
     <SelectComp @selected="selected" v-model="sendTo"></SelectComp>
     <base-input phone placeholder="Телефон" :value="value.number" @input="value.number = $event" :class="{'input_invalid': $v.value.number.$dirty && (!$v.value.number.required || !$v.value.number.minLength)}"></base-input>
   </div>
 </template>
 
 <script>
-import IMask from 'imask'
 import SelectComp from "@/components/SelectComp";
 import {required, minLength} from "vuelidate/lib/validators";
 
