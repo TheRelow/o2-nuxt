@@ -16,6 +16,7 @@ export const actions = {
       let msg = payload
       msg['time'] = firebase.database.ServerValue.TIMESTAMP
       const newDocKey = firebase.database().ref(`/messages`).push().key
+      console.log(newDocKey) // -M_ZozcTKR5LxzmHdxZk
       await firebase.database().ref(`/messages/${newDocKey}`).set(payload)
     } catch (e) {
       console.log(e)
@@ -26,7 +27,6 @@ export const actions = {
     try {
       let msg = payload
       msg['time'] = firebase.database.ServerValue.TIMESTAMP
-      console.log(msg['time'])
       const newDocKey = firebase.database().ref(`/quiz`).push().key
       await firebase.database().ref(`/quiz/${newDocKey}`).set(payload)
     } catch (e) {

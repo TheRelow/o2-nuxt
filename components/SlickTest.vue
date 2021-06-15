@@ -4,6 +4,22 @@
       <div class="wrapper first-screen__main">
         <div class="first-screen__content">
           <div class="first-screen__title">
+            Проведи это лето с нами!
+            <div class="first-screen__subtitle">
+              <span class="text_salad">3 месяца</span> фитнеса всего за <span class="text_salad">4200 рублей!</span>
+            </div>
+          </div>
+          <div>
+            <button class="btn-3d" @click="openPopup2" v-hide-cursor>Забронировать</button>
+          </div>
+        </div>
+        <div class="first-screen__img-container">
+          <img class="first-screen__img" :src="require('../assets/img/first-screen-new-man.webp')" alt="">
+        </div>
+      </div>
+      <div class="wrapper first-screen__main">
+        <div class="first-screen__content">
+          <div class="first-screen__title">
             Не был в O2?
             <br>
             Приходи в гости!
@@ -17,31 +33,6 @@
         </div>
         <div class="first-screen__img-container">
           <img class="first-screen__img" :src="require('../assets/img/humans/erohina.webp')" alt="">
-        </div>
-      </div>
-      <div class="wrapper first-screen__main">
-        <div class="first-screen__content">
-          <div class="first-screen__title">
-            Самое время заняться собой!
-            <div class="first-screen__subtitle">
-              <span class="text_salad">4 месяца</span> безлимитного фитнеса
-              <br>
-              всего за <span class="text_salad">5900 руб</span>.
-            </div>
-            <div class="first-screen__subtitle">
-              Бонусы в карте :
-              <br>
-              1 персональная тренировка
-              <br>
-              20 дней заморозки
-            </div>
-          </div>
-          <div>
-            <button class="btn-3d" @click="openPopup2" v-hide-cursor>Забронировать</button>
-          </div>
-        </div>
-        <div class="first-screen__img-container">
-          <img class="first-screen__img" :src="require('../assets/img/first-screen-man.webp')" alt="">
         </div>
       </div>
     </VueSlickCarousel>
@@ -76,8 +67,8 @@ export default {
       pauseOnFocus: true,
       pauseOnHover: false,
       swipeToSlide: false,
-      // autoplay: true,
-      // autoplaySpeed: 10000
+      autoplay: true,
+      autoplaySpeed: 10000
     },
     name: null,
     phone: null,
@@ -86,16 +77,16 @@ export default {
   computed: {
     slidBg() {
       if (this.currentSlide == null || this.currentSlide == 0) {
-        return require('assets/img/first-screen-bg.jpg')
-      } else {
         return require('assets/img/first-screen-bg-2.jpg')
+      } else {
+        return require('assets/img/first-screen-bg.jpg')
       }
     },
     overlayStyle() {
       if (this.currentSlide == null || this.currentSlide == 0) {
-        return { 'background-color': '#1C449C', 'opacity': 0.3 }
-      } else {
         return { 'background-color': '#3B3B3C', 'opacity': 0.6 }
+      } else {
+        return { 'background-color': '#1C449C', 'opacity': 0.3 }
       }
     }
   },

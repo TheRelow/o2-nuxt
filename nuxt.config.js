@@ -54,7 +54,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/yandex-metrika',
     [
       '@nuxtjs/firebase',
       {
@@ -73,6 +72,7 @@ export default {
         }
       }
     ],
+    '@nuxtjs/yandex-metrika',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa

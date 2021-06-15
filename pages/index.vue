@@ -41,7 +41,7 @@ export default {
         lang: 'ru',
       },
       title:
-        'o2fit.ru title',
+        'Фитнес клуб O2 fitness',
       meta: [
         {
           hid: 'description',
