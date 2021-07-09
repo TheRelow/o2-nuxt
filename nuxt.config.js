@@ -72,7 +72,6 @@ export default {
         }
       }
     ],
-    '@nuxtjs/yandex-metrika',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -89,19 +88,6 @@ export default {
       priority: 1,
       lastmod: new Date(),
     },
-  },
-
-  googleAnalytics: {
-    id: 'UA-144503294-1',
-  },
-
-  yandexMetrika: {
-    id: '54576715',
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true,
-    webvisor: true,
-    ecommerce: 'dataLayer',
   },
 
   googleFonts: {
