@@ -16,7 +16,7 @@
       </div>
     </div>
     <line-gallery></line-gallery>
-    <three-steps></three-steps>
+    <three-steps ref="program"></three-steps>
     <footer-map></footer-map>
   </div>
 </template>
@@ -74,6 +74,7 @@ export default {
       about: this.$refs.about,
       permissions: this.$refs.permissions,
       pricing: this.$refs.pricing,
+      program: this.$refs.program,
       trainers: this.$refs.trainers,
     }
   }

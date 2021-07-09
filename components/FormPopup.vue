@@ -4,6 +4,9 @@
       <input v-model="name" type="text" class="option offer__input" :class="{'input_invalid': $v.name.$dirty && !$v.name.required}" placeholder="Имя">
       <base-input phone placeholder="Телефон" :value="phone" @input="phone = $event" :class="{'input_invalid': $v.phone.$dirty && (!$v.phone.required || !$v.phone.minLength)}"></base-input>
       <button class="offer__btn btn" @click="sendMsg">{{btnText}}</button>
+      <div class="policy">
+        Нажимая кнопку, вы даете согласие на обработку <a class="link" href="/policy.docx">персональных данных</a>
+      </div>
     </div>
   </div>
 </template>
@@ -23,6 +26,9 @@ export default {
     },
     btnText: {
       default: 'Записаться'
+    },
+    target: {
+      default: 'Записаться на тренировку'
     }
   },
   validations: {
@@ -46,7 +52,7 @@ export default {
       this.$store.dispatch('main/setNewMessage', {
         name: this.name,
         phone: this.phone,
-        target: 'Записаться на тренировку',
+        target: this.target,
         where: this.where
       })
       this.closePopup()

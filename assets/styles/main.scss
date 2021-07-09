@@ -22,18 +22,6 @@ body {
   font-family: 'Exo 2', sans-serif;
 }
 
-.text_salad {
-  color: #00EC96;
-}
-
-.text_acc {
-  color: $acc
-}
-
-.text_center {
-  text-align: center;
-}
-
 .center-btn {
   display: flex;
   justify-content: center;
@@ -206,3 +194,20 @@ body {
 @import "questions";
 @import "option";
 @import "admin-table";
+
+
+.text_salad {
+  color: #00EC96;
+}
+
+.text_acc {
+  color: $acc
+}
+
+.text_blue {
+  color: #0B70F6;
+}
+
+.text_center {
+  text-align: center;
+}

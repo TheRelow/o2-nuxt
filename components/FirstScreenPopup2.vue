@@ -1,5 +1,5 @@
 <template>
-  <FormPopup where="Первый экран(второй слайд)" btnText="Забронировать"></FormPopup>
+  <FormPopup where="Первый экран(акция)" target="Узнать цену" btnText="Узнать цену"></FormPopup>
 </template>
 
 <script>
